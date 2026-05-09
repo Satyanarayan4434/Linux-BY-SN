@@ -1,0 +1,47 @@
+
+
+
+
+awk  
+ awk command extracts the fields from the file
+ 	awk '{print $0}' file.txt
+	awk '{print $1,$2}' file.txt
+	ls -l | grep awk '{print $1,$2}'
+	ls -l | grep awk '{print $NF}'
+
+uptime
+	uptime -V
+	uptime -p
+
+netstat
+	netstat -anp | grep 22
+	netstat -rnv
+
+find file with specific permission
+	find /bin -perm 755
+	find /var/log/ -perm 755 -ls
+
+ssh
+	man ssh
+	cat /etc/sshd/sshd_config
+	grep MaxSessions /etc/ssh/sshd_config
+	cat /etc/sshd/ssh_config(client file)
+
+	
+scp(secure copy protocal)
+	
+	scp apples chandu@192.168.*.*:/home/chandu
+	scp -r apples /home/chandu/
+	scp -r /local/chandu chandu@192.168.*.*:/home/ranji
+
+swap space
+
+	lsblk
+	vgs
+	lvs
+	lvextend -L 1000M /dev/centos/swap
+	swapon
+	swapoff -v /dev/centos/swap
+	mkswap /de v/centos/swap
+	swapon -va
+	swapon -s
